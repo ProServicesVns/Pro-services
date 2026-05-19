@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITA 2025: TDS Rates, Sections & Threshold Mapping Tool | theproservices.in</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free Income Tax Act 2025 TDS Mapping Tool. Find updated TDS rates, Section 393 mapping, and thresholds for FY 2026-27. Ideal for CAs and Tax Professionals.">
+    <meta name="keywords" content="TDS Rates 2026-27, Income Tax Act 2025 TDS, Section 393 TDS Mapping, TDS Section 194C new section, TDS 194J 2026, Indian Tax Rates 2026-27, theproservices.in">
+    <meta name="author" content="Shubham Gujrati">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://theproservices.in" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theproservices.in">
+    <meta property="og:title" content="ITA 2025: TDS Mapping & Rates Chart (FY 2026-27)">
+    <meta property="og:description" content="Updated TDS registry and section mapping for the new Income Tax Act 2025. Covering FY 2026-27.">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ITA 2025 TDS Mapping Tool",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "description": "Comprehensive mapping tool for TDS rates and sections under the Income Tax Act 2025 for FY 2026-27.",
+      "author": {
+        "@type": "Person",
+        "name": "Shubham Gujrati"
+      },
+      "url": "https://theproservices.in"
+    }
+    </script>
+
+    <style>
+        :root { --primary: #1a2a3a; --accent: #3498db; --success: #27ae60; --warning: #f39c12; --danger: #e74c3c; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; padding: 20px; color: #333; }
+        .container { max-width: 1200px; margin: auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 25px; border-bottom: 4px solid var(--accent); padding-bottom: 10px; }
+        .controls { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+        select, input { padding: 12px; border: 2px solid #dfe6e9; border-radius: 8px; font-size: 15px; flex: 1; }
+        select:focus, input:focus { border-color: var(--accent); outline: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        th { background: var(--primary); color: white; padding: 15px; text-align: left; position: sticky; top: 0; cursor: pointer; user-select: none; transition: background 0.2s; }
+        th:hover { background: var(--accent); }
+        td { padding: 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+        tr:hover { background: #f8fbff; }
+        .code-pill { background: #ebf5ff; color: var(--accent); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: bold; }
+        .rate-bold { color: #d35400; font-weight: bold; }
+        .threshold { color: #7f8c8d; font-style: italic; font-size: 13px; }
+        .new-id { color: var(--success); font-weight: bold; }
+        .regime-tag { padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        .new-regime { background: #e8f5e9; color: #2e7d32; }
+        .old-regime { background: #fff3e0; color: #ef6c00; }
+        .info-box { background: #e1f5fe; border-left: 5px solid #03a9f4; padding: 15px; margin-bottom: 20px; border-radius: 4px; display: flex; gap: 20px; font-size: 14px; }
+        .info-box div { flex: 1; }
+        .footer-links { margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; font-size: 13px; }
+        .footer-links a { color: var(--accent); text-decoration: none; margin: 0 10px; }
+        .footer-links a:hover { text-decoration: underline; }
+
+        /* ── Tablet (≤ 900px) ── */
+        @media (max-width: 900px) {
+            body { padding: 12px; }
+            .container { padding: 18px; border-radius: 8px; }
+            .header h1 { font-size: 1.3rem; }
+            table { font-size: 13px; }
+            th, td { padding: 10px 8px; }
+        }
+
+        /* ── Mobile (≤ 600px) ── */
+        @media (max-width: 600px) {
+            body { padding: 8px; background: #f0f2f5; }
+            .container { padding: 12px 10px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+
+            /* Header */
+            .header { margin-bottom: 16px; padding-bottom: 8px; }
+            .header h1 { font-size: 1.1rem; line-height: 1.3; margin: 0 0 4px; }
+            .header p { font-size: 12px; margin: 0; color: #555; }
+
+            /* Info box – stack vertically */
+            .info-box { flex-direction: column; gap: 10px; padding: 12px; font-size: 13px; }
+            .info-box div { flex: unset; }
+
+            /* Controls – full-width stack */
+            .controls { flex-direction: column; gap: 10px; }
+            .controls label { display: none; }
+            select, input { flex: unset; width: 100%; box-sizing: border-box; font-size: 14px; padding: 10px 12px; }
+
+            /* Table – card-style on mobile */
+            .container > div[style*="overflow-x"] { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -10px; padding: 0 10px; }
+            table { font-size: 12px; min-width: 520px; }
+            th { padding: 10px 8px; font-size: 12px; white-space: nowrap; }
+            td { padding: 10px 8px; }
+            .code-pill { font-size: 11px; padding: 1px 5px; }
+            .regime-tag { font-size: 10px; }
+            .threshold { font-size: 11px; }
+
+            /* Footer links – wrap naturally */
+            .footer-links { font-size: 12px; padding: 12px; }
+            .footer-links a { margin: 0 6px; display: inline-block; line-height: 1.8; }
+
+            /* Bottom note */
+            .container > div[style*="border-top"] p { font-size: 11px; }
+        }
+
+        /* ── Very small screens (≤ 360px) ── */
+        @media (max-width: 360px) {
+            .header h1 { font-size: 1rem; }
+            select, input { font-size: 13px; }
+            table { min-width: 460px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Income Tax Act 2025 Mapping & TDS Registry</h1>
+        <p>Operational for Financial Year 2026-27 (Assessment Year 2027-28)</p>
+    </div>
+
+    <div class="info-box">
+        <div>
+            <strong>Rebate (87A) Update:</strong> Tax-free income up to <strong>&#8377;12 Lakhs</strong> in New Regime (Default). Max Rebate: &#8377;60,000.
+        </div>
+        <div>
+            <strong>Standard Deduction:</strong> Increased to <strong>&#8377;75,000</strong> for Salary & Pensioners in the New Regime.
+        </div>
+    </div>
+
+    <div class="controls">
+        <label><strong>Filter View:</strong></label>
+        <select id="viewSelector" onchange="renderTable()">
+            <option value="tds">TDS Detailed (Domestic)</option>
+            <option value="tds_foreign">TDS Detailed (Foreign)</option>
+            <option value="tcs">TCS Detailed (Domestic)</option>
+            <option value="rebates">Tax Rebates & Deductions (87A, 80C, etc.)</option>
+            <option value="general">General Section Mapping (1961 vs 2025)</option>
+        </select>
+        <input type="text" id="searchInput" onkeyup="renderTable()" placeholder="Search by payment type, section, or keyword...">
+    </div>
+
+    <div style="overflow-x: auto;">
+        <table id="mainTable">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: #fff; border-radius: 8px; border: 1px solid #eee;">
+        <h2 style="color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 10px;">Frequently Asked Questions (FAQ)</h2>
+        
+        <div style="margin-top: 15px;">
+            <p><strong>Q1: What is the main change in TDS under the Income Tax Act 2025?</strong></p>
+            <p style="color: #555; margin-bottom: 15px;">A: The primary change is the consolidation of various TDS sections (like 194C, 194J, 194H) into a unified structure under Section 393. This structural change aims to simplify the code while maintaining distinct rates for different types of payments.</p>
+            
+            <p><strong>Q2: How do I find the new section for 194C (Contractors)?</strong></p>
+            <p style="color: #555; margin-bottom: 15px;">A: Under the new ITA 2025, payments to contractors are mapped to Section 393(1)[6(i)]. Our tool provides the exact sub-clause mapping for both individuals and other entities.</p>
+            
+            <p><strong>Q3: Are the TDS rates changing for FY 2026-27?</strong></p>
+            <p style="color: #555; margin-bottom: 15px;">A: Yes, several rates have been streamlined. For instance, Rent and Commission sections have seen adjustments in their mapping and thresholds. Always refer to the "Rate" column in our tool for the latest assessment year data.</p>
+        </div>
+
+        <h2 style="color: var(--primary); border-bottom: 20px; border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 30px;">How to Use This Mapping Tool</h2>
+        <p style="color: #555;">This registry is designed for Chartered Accountants, Tax Professionals, and Finance Managers to quickly transition from the 1961 Act to the 2025 Act. To use:</p>
+        <ul style="color: #555; line-height: 1.6;">
+            <li><strong>Search:</strong> Use the search bar to type an old section (e.g., "194J") or a keyword (e.g., "Rent").</li>
+            <li><strong>Filter:</strong> Switch views to see Domestic TDS, Foreign TDS, or the new TCS registry.</li>
+            <li><strong>Verify:</strong> Check the "New Sec (2025)" column to update your accounting software or ERP systems for the upcoming financial year.</li>
+        </ul>
+    </div>
+
+    <div class="footer-links">
+        <strong>Important Resources:</strong>
+        <a href="https://www.incometax.gov.in" target="_blank">Income Tax India</a> | 
+        <a href="https://www.tdscpc.gov.in" target="_blank">TRACES Portal</a> | 
+        <a href="https://www.theproservices.in" target="_blank">The Pro Services</a>
+    </div>
+
+    <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; font-size: 12px; color: #7f8c8d; text-align: center;">
+        <p><strong>Note:</strong> This mapping tool is based on the updated TDS & TCS Rate Chart for Tax Year 2026-27. While TDS/TCS provisions are consolidated under Section 393/394, specific serial numbers and codes should be cross-verified with the final notified gazette.</p>
+        <p style="margin-top: 5px;"><strong>PAN Requirement (Sec 397(2) / 206AA / 206CC):</strong> Failure to furnish PAN results in higher rates. For <strong>TDS:</strong> Higher of Provision rate, Rate in force, or 20% (5% for Sec 393(1)[8(ii)/(v)]). For <strong>TCS:</strong> Higher of Twice the rate or 5% (capped at 20%).</p>
+        <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">Designed by Shubham Gujrati | <a href="https://theproservices.in" style="color: var(--primary); text-decoration: none;">theproservices.in</a></p>
+    </div>
+</div>
+
+<script>
+    const tdsData = [
+        { name: 'Salary (Accumulated Balance)', old: '192', new: '392(7)', code: '1004', rate: 'Slab Rates', limit: 'Nil' },
+        { name: 'Insurance Commission', old: '194D', new: '393(1)[1(I)]', code: '1005', rate: '2% (Ind) / 10% (Oth)', limit: '&#8377;20,000' },
+        { name: 'Commission or Brokerage', old: '194H', new: '393(1)[1(ii)]', code: '1006', rate: '2%', limit: '&#8377;20,000' },
+        { name: 'Rent (Plant & Machinery)', old: '194I(a)', new: '393(1)[2(ii).D(a)]', code: '1008', rate: '2%', limit: '&#8377;50,000 / month' },
+        { name: 'Rent (Land/Bldg/Furniture)', old: '194I(b)', new: '393(1)[2(ii).D(b)]', code: '1009', rate: '10%', limit: '&#8377;50,000 / month' },
+        { name: 'JDA Monetary Consideration', old: '194IC', new: '393(1)[3(ii)]', code: '1011', rate: '10%', limit: 'Nil' },
+        { name: 'Comp. on Acquisition of Property', old: '194IA', new: '393(1)[3(iii)]', code: '1012', rate: '10%', limit: '&#8377;5,00,000' },
+        { name: 'Mutual Fund Income', old: '194K', new: '393(1)[4(i)]', code: '1013', rate: '10%', limit: '&#8377;10,000' },
+        { name: 'Business Trust (Interest)', old: '194LBA', new: '393(1)[4(ii)]', code: '1014', rate: '10%', limit: 'Nil' },
+        { name: 'Business Trust (Dividend)', old: '194LBA', new: '393(1)[4(ii)]', code: '1015', rate: '10%', limit: 'Nil' },
+        { name: 'Investment Fund Income', old: '194LBB', new: '393(1)[4(iii)]', code: '1017', rate: '10%', limit: 'Nil' },
+        { name: 'Securitization Trust Income', old: '194LBC', new: '393(1)[4(iv)]', code: '1018', rate: '10%', limit: 'Nil' },
+        { name: 'Interest on Securities', old: '193', new: '393(1)[5(i)]', code: '1019', rate: '10%', limit: '&#8377;10,000' },
+        { name: 'Interest (Senior Citizens)', old: '194A', new: '393(1)[5(ii).D(a)]', code: '1020', rate: '10%', limit: '&#8377;1,00,000' },
+        { name: 'Interest (Others)', old: '194A', new: '393(1)[5(ii).D(b)]', code: '1021', rate: '10%', limit: '&#8377;50,000' },
+        { name: 'Interest (Others - General)', old: '194A', new: '393(1)[5(iii)]', code: '1022', rate: '10%', limit: '&#8377;10,000' },
+        { name: 'Contractors (Individual/HUF)', old: '194C', new: '393(1)[6(i).D(a)]', code: '1023', rate: '1% (Ind) / 2% (Oth)', limit: '&#8377;30k (S) / &#8377;1L (A)' },
+        { name: 'Contractors (Others)', old: '194C', new: '393(1)[6(i).D(b)]', code: '1024', rate: '1% (Ind) / 2% (Oth)', limit: '&#8377;30k (S) / &#8377;1L (A)' },
+        { name: 'Technical Fees/Royalty', old: '194J(a)', new: '393(1)[6(iii).D(a)]', code: '1026', rate: '2%', limit: '&#8377;50,000' },
+        { name: 'Professional Fees', old: '194J(b)', new: '393(1)[6(iii).D(b)]', code: '1027', rate: '10%', limit: '&#8377;50,000' },
+        { name: 'Director\'s Fees', old: '194J(b)', new: '393(1)[6(iii).D(b)]', code: '1028', rate: '10%', limit: 'Nil' },
+        { name: 'Dividends', old: '194', new: '393(1)[7]', code: '1029', rate: '10%', limit: '&#8377;10,000' },
+        { name: 'Life Insurance Payout', old: '194DA', new: '393(1)[8(i)]', code: '1030', rate: '2%', limit: '&#8377;1,00,000' },
+        { name: 'Purchase of Goods', old: '194Q', new: '393(1)[8(ii)]', code: '1031', rate: '0.1%', limit: '&#8377;50,00,000' },
+        { name: 'Business Benefits (Money)', old: '194R', new: '393(1)[8(iv)]', code: '1033', rate: '10%', limit: '&#8377;20,000' },
+        { name: 'Business Benefits (Kind)', old: '194R', new: '393(1)[8(iv)]', code: '1034', rate: '10%', limit: '&#8377;20,000' },
+        { name: 'E-commerce Participants', old: '194O', new: '393(1)[8(v)]', code: '1035', rate: '0.1%', limit: '&#8377;5,00,000 (Ind/HUF)' },
+        { name: 'VDA Transfer (Ind/HUF)', old: '194S', new: '393(1)[8(vi)]', code: '1037', rate: '1%', limit: '&#8377;10,000' },
+        { name: 'VDA Transfer (Others)', old: '194SP', new: '393(1)[8(vi)]', code: '1038', rate: '1%', limit: '&#8377;10,000' },
+        { name: 'Winnings (Lottery/Games)', old: '194B', new: '393(3)[1]', code: '1058', rate: '30%', limit: '&#8377;10,000' },
+        { name: 'Winnings (Kind)', old: '194B', new: '393(3)[1]', code: '1059', rate: '30%', limit: '&#8377;10,000' },
+        { name: 'Online Gaming Winnings', old: '194BA', new: '393(3)[2]', code: '1060', rate: '30%', limit: 'Nil' },
+        { name: 'Online Gaming (Kind)', old: '194BA', new: '393(3)[2]', code: '1061', rate: '30%', limit: '&#8377;10,000' },
+        { name: 'Horse Race Winnings', old: '194BB', new: '393(3)[3]', code: '1062', rate: '30%', limit: '&#8377;10,000' },
+        { name: 'Lottery Commission', old: '194G', new: '393(3)[4]', code: '1063', rate: '2%', limit: '&#8377;20,000' },
+        { name: 'Cash Withdrawal (Coop)', old: '194N', new: '393(3)[5.D(a)]', code: '1064', rate: '2%', limit: '&#8377;3 Crore' },
+        { name: 'Cash Withdrawal (Others)', old: '194N', new: '393(3)[5.D(b)]', code: '1065', rate: '2%', limit: '&#8377;1 Crore' },
+        { name: 'Payment from NSS', old: '194EE', new: '393(3)[6]', code: '1066', rate: '10%', limit: '&#8377;2,500' },
+        { name: 'Payment to Partners', old: '194T', new: '393(3)[7]', code: '1067', rate: '10%', limit: '&#8377;20,000' }
+    ];
+
+    const tdsForeignData = [
+        { name: 'Accumulated Balance (EPF)', old: '192A', new: '392(7)', code: '1004', rate: '10%', limit: 'Nil' },
+        { name: 'Foreign Sportsmen/Assoc.', old: '194E', new: '393(2)[1]', code: '1039', rate: '20%', limit: 'Nil' },
+        { name: 'Interest (FC Borrowing)', old: '194LC', new: '393(2)[2]', code: '1040', rate: '5%', limit: 'Nil' },
+        { name: 'Interest (Rupee Bond)', old: '194LD', new: '393(2)[3]', code: '1041', rate: '5%', limit: 'Nil' },
+        { name: 'Interest (IFSC Bond - Pre 2023)', old: '194LC', new: '393(2)[4.E(a)]', code: '1042', rate: '4%', limit: 'Nil' },
+        { name: 'Interest (IFSC Bond - Post 2023)', old: '194LC', new: '393(2)[4.E(b)]', code: '1043', rate: '9%', limit: 'Nil' },
+        { name: 'Infrastructure Debt Fund', old: '194LB', new: '393(2)[5]', code: '1044', rate: '5%', limit: 'Nil' },
+        { name: 'Business Trust (Int/Div 5%)', old: '194LBA(a)', new: '393(2)[6.E(a)]', code: '1045', rate: '5%', limit: 'Nil' },
+        { name: 'Business Trust (Int/Div 10%)', old: '194LBA(b)', new: '393(2)[6.E(b)]', code: '1046', rate: '10%', limit: 'Nil' },
+        { name: 'Securitization Trust (Foreign)', old: '194LBC', new: '393(2)[7]', code: '1047', rate: '30-35%', limit: 'Nil' },
+        { name: 'Investment Fund (Foreign)', old: '194LBB', new: '393(2)[8]', code: '1048', rate: '10-35%', limit: 'Nil' },
+        { name: 'Securitization Trust (Residue)', old: '194LBC', new: '393(2)[9]', code: '1049', rate: '10-35%', limit: 'Nil' },
+        { name: 'Mutual Fund/Spec Company', old: '195', new: '393(2)[10]', code: '1050', rate: '20%', limit: 'Nil' },
+        { name: 'Units (Section 208)', old: '196B', new: '393(2)[11]', code: '1051', rate: '10%', limit: 'Nil' },
+        { name: 'LTCG (Units Sec 208)', old: '196B', new: '393(2)[12]', code: '1052', rate: '12.5%', limit: 'Nil' },
+        { name: 'Interest/Div (Bond/GDR)', old: '196C', new: '393(2)[13]', code: '1053', rate: '10%', limit: 'Nil' },
+        { name: 'LTCG (Bond/GDR)', old: '196C', new: '393(2)[14]', code: '1054', rate: '12.5%', limit: 'Nil' },
+        { name: 'Securities (Sec 210(1))', old: '196D', new: '393(2)[15]', code: '1055', rate: '20%', limit: 'Nil' },
+        { name: 'Securities (Sec 210(1))', old: '196D', new: '393(2)[16]', code: '1056', rate: '10%', limit: 'Nil' },
+        { name: 'Other Income (Non-Residents)', old: '195', new: '393(2)[17]', code: '1057', rate: 'Average', limit: 'Nil' }
+    ];
+
+    const tcsData = [
+        { name: 'Alcoholic Liquor', old: '206C-A', new: '394(1)[1]', code: '1068', rate: '2%', limit: 'Nil' },
+        { name: 'Tendu Leaves', old: '206C-I', new: '394(1)[2]', code: '1069', rate: '2%', limit: 'Nil' },
+        { name: 'Timber (Forest Lease)', old: '206C-B', new: '394(1)[3]', code: '1070', rate: '2%', limit: 'Nil' },
+        { name: 'Timber (Other mode)', old: '206C-C', new: '394(1)[3]', code: '1071', rate: '2%', limit: 'Nil' },
+        { name: 'Forest Produce (Other)', old: '206C-D', new: '394(1)[3]', code: '1072', rate: '2%', limit: 'Nil' },
+        { name: 'Scrap', old: '206C-E', new: '394(1)[4]', code: '1073', rate: '2%', limit: 'Nil' },
+        { name: 'Minerals (Coal/Iron etc)', old: '206C-J', new: '394(1)[5]', code: '1074', rate: '2%', limit: 'Nil' },
+        { name: 'Motor Vehicle (> Threshold)', old: '206C-L', new: '394(1)[6.D(a)]', code: '1075', rate: '1%', limit: 'As per rules' },
+        { name: 'Wrist Watch (> Threshold)', old: '206C-MA', new: '394(1)[6.D(b)]', code: '1076', rate: '1%', limit: 'As per rules' },
+        { name: 'Art Piece/Antiques', old: '206C-MB', new: '394(1)[6.D(b)]', code: '1077', rate: '1%', limit: 'As per rules' },
+        { name: 'Collectibles (Coin/Stamp)', old: '206C-MC', new: '394(1)[6.D(b)]', code: '1078', rate: '1%', limit: 'As per rules' },
+        { name: 'Yacht/Rowing Boat/Canoe', old: '206C-MD', new: '394(1)[6.D(b)]', code: '1079', rate: '1%', limit: 'As per rules' },
+        { name: 'Sunglasses (> Threshold)', old: '206C-ME', new: '394(1)[6.D(b)]', code: '1080', rate: '1%', limit: 'As per rules' },
+        { name: 'Bag (Handbag/Purse)', old: '206C-MF', new: '394(1)[6.D(b)]', code: '1081', rate: '1%', limit: 'As per rules' },
+        { name: 'Shoes (> Threshold)', old: '206C-MG', new: '394(1)[6.D(b)]', code: '1082', rate: '1%', limit: 'As per rules' },
+        { name: 'Sportswear & Equipment', old: '206C-MH', new: '394(1)[6.D(b)]', code: '1083', rate: '1%', limit: 'As per rules' },
+        { name: 'Home Theatre System', old: '206C-MI', new: '394(1)[6.D(b)]', code: '1084', rate: '1%', limit: 'As per rules' },
+        { name: 'Horse for Racing/Polo', old: '206C-MJ', new: '394(1)[6.D(b)]', code: '1085', rate: '1%', limit: 'As per rules' },
+        { name: 'LRS (Edu/Medical)', old: '206C-T', new: '394(1)[7.D(a)]', code: '1086', rate: '2%', limit: 'Above &#8377;10 Lakh' },
+        { name: 'LRS (Others)', old: '206C-Q', new: '394(1)[7.D(b)]', code: '1087', rate: '20%', limit: 'Above &#8377;10 Lakh' },
+        { name: 'Overseas Tour (Up to 10L)', old: '206C-O', new: '394(1)[8.D(a)]', code: '1088', rate: '2%', limit: 'Nil' },
+        { name: 'Overseas Tour (Above 10L)', old: '206C-O', new: '394(1)[8.D(b)]', code: '1089', rate: '2%', limit: 'Nil' },
+        { name: 'Parking Lot', old: '206C-F', new: '394(1)[9]', code: '1090', rate: '2%', limit: 'Nil' },
+        { name: 'Toll Plaza', old: '206C-G', new: '394(1)[9]', code: '1091', rate: '2%', limit: 'Nil' },
+        { name: 'Mine or Quarry', old: '206C-H', new: '394(1)[9]', code: '1092', rate: '2%', limit: 'Nil' }
+    ];
+
+    const rebateData = [
+        { name: 'Tax Rebate (New Regime)', old: '87A', new: '203 (approx)', type: 'New', detail: 'Max &#8377;60,000 rebate if income &#8804; &#8377;12,00,000' },
+        { name: 'Tax Rebate (Old Regime)', old: '87A', new: '203 (approx)', type: 'Old', detail: 'Max &#8377;12,500 rebate if income &#8804; &#8377;5,00,000' },
+        { name: 'Standard Deduction', old: '16(ia)', new: 'Salary Head', type: 'New', detail: '&#8377;75,000 (increased from &#8377;50,000)' },
+        { name: 'Investment Deduction', old: '80C', new: 'N/A', type: 'Old', detail: 'Up to &#8377;1,50,000 (PPF, ELSS, LIC, etc.)' },
+        { name: 'Medical Insurance', old: '80D', new: 'N/A', type: 'Old', detail: '&#8377;25k-50k for self/parents' },
+        { name: 'Savings Interest', old: '80TTA/B', new: 'N/A', type: 'Old', detail: '&#8377;10k (Normal) / &#8377;50k (Sr. Citizen)' },
+        { name: 'National Pension Scheme', old: '80CCD(1B)', new: 'N/A', type: 'Old', detail: 'Additional &#8377;50,000 deduction' },
+        { name: 'Corporate NPS', old: '80CCD(2)', new: 'Allowed in both', type: 'Both', detail: 'Up to 14% of Salary (Govt/Pvt)' }
+    ];
+
+    const generalData = [
+        { name: 'Tax Year Definition', old: '2(9) & 3', new: '3' },
+        { name: 'Residential Status', old: '6', new: '6' },
+        { name: 'Heads of Income', old: '14', new: '14' },
+        { name: 'Income from Salary', old: '15', new: '15' },
+        { name: 'Income from House Property', old: '22', new: '20' },
+        { name: 'Profits of Business (PGBP)', old: '28', new: '26' },
+        { name: 'Capital Gains', old: '45', new: '67' },
+        { name: 'New Tax Regime (Default)', old: '115BAC', new: '202' },
+        { name: 'TCS Provisions', old: '206C', new: '394' },
+        { name: 'TDS Certificate (Salary)', old: 'Form 16', new: 'Form 130' },
+        { name: 'TDS Certificate (Non-Salary)', old: 'Form 16A', new: 'Form 131' },
+        { name: 'TDS Return (Salary)', old: 'Form 24Q', new: 'Form 138' },
+        { name: 'TDS Return (Non-Salary Residents)', old: 'Form 26Q', new: 'Form 140' }
+    ];
+
+    let sortConfig = { key: 'old', direction: 'asc' };
+
+    function setSort(key) {
+        if (sortConfig.key === key) {
+            sortConfig.direction = sortConfig.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+            sortConfig.key = key;
+            sortConfig.direction = 'asc';
+        }
+        renderTable();
+    }
+
+    function renderTable() {
+        const view = document.getElementById('viewSelector').value;
+        const search = document.getElementById('searchInput').value.toLowerCase();
+        const head = document.getElementById('tableHead');
+        const body = document.getElementById('tableBody');
+        
+        body.innerHTML = '';
+        const sortIcon = (key) => sortConfig.key === key ? (sortConfig.direction === 'asc' ? ' &uarr;' : ' &darr;') : '';
+
+        let data = [];
+        if (view === 'tds') data = tdsData;
+        else if (view === 'tds_foreign') data = tdsForeignData;
+        else if (view === 'tcs') data = tcsData;
+        else if (view === 'rebates') data = rebateData;
+        else data = generalData;
+
+        if (view === 'tds' || view === 'tds_foreign' || view === 'tcs') {
+            head.innerHTML = `<tr>
+                <th onclick="setSort('name')">Nature of Payment${sortIcon('name')}</th>
+                <th onclick="setSort('old')">Old Sec.${sortIcon('old')}</th>
+                <th onclick="setSort('new')">New Sec (2025)${sortIcon('new')}</th>
+                <th onclick="setSort('code')">Code${sortIcon('code')}</th>
+                <th onclick="setSort('rate')">Rate${sortIcon('rate')}</th>
+                <th onclick="setSort('limit')">Threshold${sortIcon('limit')}</th>
+            </tr>`;
+            data.filter(i => i.name.toLowerCase().includes(search) || i.old.toLowerCase().includes(search) || i.code.toLowerCase().includes(search)).sort((a,b) => {
+                if (sortConfig.key === 'old' || sortConfig.key === 'new' || sortConfig.key === 'code') {
+                    return sortConfig.direction === 'asc' ? a[sortConfig.key].localeCompare(b[sortConfig.key], undefined, {numeric: true}) : b[sortConfig.key].localeCompare(a[sortConfig.key], undefined, {numeric: true});
+                }
+                return sortConfig.direction === 'asc' ? a[sortConfig.key].localeCompare(b[sortConfig.key]) : b[sortConfig.key].localeCompare(a[sortConfig.key]);
+            }).forEach(item => {
+                body.innerHTML += `<tr><td><strong>${item.name}</strong></td><td>${item.old}</td><td class="new-id">${item.new}</td><td><span class="code-pill">${item.code}</span></td><td class="rate-bold">${item.rate}</td><td class="threshold">${item.limit}</td></tr>`;
+            });
+        } else if (view === 'rebates') {
+            head.innerHTML = `<tr>
+                <th onclick="setSort('name')">Concept${sortIcon('name')}</th>
+                <th onclick="setSort('old')">Old Sec.${sortIcon('old')}</th>
+                <th onclick="setSort('type')">Applicability${sortIcon('type')}</th>
+                <th>Details / Limits</th>
+            </tr>`;
+            data.filter(i => i.name.toLowerCase().includes(search) || i.old.toLowerCase().includes(search)).forEach(item => {
+                const tagClass = item.type.toLowerCase() === 'new' ? 'new-regime' : (item.type.toLowerCase() === 'old' ? 'old-regime' : 'code-pill');
+                body.innerHTML += `<tr>
+                    <td><strong>${item.name}</strong></td>
+                    <td>${item.old}</td>
+                    <td><span class="regime-tag ${tagClass}">${item.type} Regime</span></td>
+                    <td class="threshold">${item.detail}</td>
+                </tr>`;
+            });
+        } else {
+            head.innerHTML = `<tr>
+                <th onclick="setSort('name')">Concept / Head of Income${sortIcon('name')}</th>
+                <th onclick="setSort('old')">Old Act (1961)${sortIcon('old')}</th>
+                <th onclick="setSort('new')">New Act (2025)${sortIcon('new')}</th>
+            </tr>`;
+            data.filter(i => i.name.toLowerCase().includes(search) || i.old.toLowerCase().includes(search)).forEach(item => {
+                body.innerHTML += `<tr><td><strong>${item.name}</strong></td><td>Section ${item.old}</td><td class="new-id">Section ${item.new}</td></tr>`;
+            });
+        }
+    }
+
+    renderTable();
+</script>
+
+</body>
+</html>
